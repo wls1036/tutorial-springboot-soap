@@ -1,0 +1,28 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.definesys.com/xml/employee"
+           targetNamespace="http://www.definesys.com/xml/employee" elementFormDefault="qualified">
+
+    <xs:element name="EmployeeDetailRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="code" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="EmployeeDetailResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Employee" type="tns:Employee"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="Employee">
+        <xs:sequence>
+            <xs:element name="code" type="xs:string"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
