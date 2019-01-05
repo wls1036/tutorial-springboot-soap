@@ -33,18 +33,18 @@ public class WebserviceConfig extends WsConfigurerAdapter {
         return new ServletRegistrationBean(servlet, "/ws/*");
     }
 
-//    @Bean(name = "employee")
-//    public Wsdl11Definition defaultWsdl11Definition(XsdSchema schema) {
-//        DefaultWsdl11Definition wsdl = new DefaultWsdl11Definition();
-//        wsdl.setPortTypeName("EmployeePort");
-//        wsdl.setLocationUri("/ws/employee-detail");
-//        wsdl.setTargetNamespace("http://www.definesys.com/xml/employee1");
-//        wsdl.setSchema(schema);
-//        return wsdl;
-//    }
+    @Bean(name = "employee")
+    public Wsdl11Definition defaultWsdl11Definition(XsdSchema schema) {
+        DefaultWsdl11Definition wsdl = new DefaultWsdl11Definition();
+        wsdl.setPortTypeName("EmployeePort");
+        wsdl.setLocationUri("/ws/employee-detail");
+        wsdl.setTargetNamespace("http://www.definesys.com/xml/employee1");
+        wsdl.setSchema(schema);
+        return wsdl;
+    }
 
-//    @Bean
-//    public XsdSchema employeeSchema() {
-//        return new SimpleXsdSchema(new ClassPathResource("employee.xsd"));
-//    }
+    @Bean
+    public XsdSchema employeeSchema() {
+        return new SimpleXsdSchema(new ClassPathResource("employee.xsd"));
+    }
 }
